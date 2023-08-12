@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+body {
+    background-color: #E0E8FF;
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    caret-color: transparent;
+}
+
+.card {
+    width: 21.8rem;
+    height: 37.8rem;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 10.666rem 2.1333rem 1.9333rem 1.0666rem 5rem 1.6rem 5.4rem 1.6rem 3.333rem 1.6rem 1.333rem 2.1333rem; 
+    grid-template-columns: 1.6rem 0.5333rem 17.5333rem 0.5333rem 1.6rem;
+    grid-template-areas: 
+    "image image image image image"
+    ". . . . ."
+    ". . title . ."
+    ". . . . ."
+    ". . description . ."
+    ". . . . ."
+    ". summary summary summary ."
+    ". . . . ."
+    ". proceed-btn proceed-btn proceed-btn ."
+    ". . . . ."
+    ". cancel-btn cancel-btn cancel-btn ."
+    ;
+}
+
+.hero {
+    grid-area: image;
+    width: 100%;
+}
+
+.title {
+    color: #1F2E55;
+    text-align: center;
+    font-size: 1.466rem;
+    font-weight: 900;
+    grid-area: title;
+}
+
+.description {
+    color:#717FA6;
+    font-weight: 500;
+    line-height: 166.667%;
+    text-align: center;
+    grid-area: description;
+}
+
+.summary {
+    width: 18.6rem;
+    height: 5.4rem;
+    background-color: #F7F9FF;
+    border-radius: 11px;
+    grid-area: summary;
+    display: grid;
+    grid-template-rows: 1.1333rem 0.2666rem 0.8rem 0.5666rem 0.5666rem 0.70rem 1.2666rem; 
+    grid-template-columns: 1.0666rem 3.2rem 1.333rem 5.924rem 2.8226rem 3.2rem 1.0666rem;
+    grid-template-areas: 
+    ". . . . . . ."
+    " . note . . . . ."
+    ". note . plan . . ."
+    ". note . plan . change ."
+    ". note . price . . ."
+    ". note . price . . ."
+    ". . . . . . ."
+    ;
+}
+
+.note {
+    width: 3.2rem;
+    height: 3.2rem;
+    grid-area:note;
+}
+
+.plan-type {
+    color:#1F2E55;
+    font-size: 0.9333rem;
+    font-weight: 900;
+    grid-area: plan;
+}
+
+.price {
+    color:#717FA6;
+    font-weight: 500;
+    grid-area: price;
+    font-size: 0.9333rem;
+}
+
+.change-link {
+    color:#382AE1;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 0.8666rem;
+    grid-area: change;
+}
+
+.proceed-btn {
+    width: 18.6rem;
+    height: 3.333rem;
+    border-radius: 11px;
+    background-color: #382AE1;
+    box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+    color: #fff;
+    font-weight: 900;
+    border: none;
+    font-family: 'Red Hat Display', sans-serif;
+    grid-area: proceed-btn;
+}
+
+.cancel-link {
+    color:#717FA6;
+    font-weight: 900;
+    text-decoration: none;
+    grid-area: cancel-btn;
+}
+
+
+@media (min-width: 450px) {
+    body {
+        background: #E0E8FF url(/img/background.png) no-repeat;      
+        background-size: 100vw;
+    }
+    
+    .card {
+        width: 30rem;
+        height: 46.466rem;
+        grid-template-rows: 14.666rem 3rem 2.4666rem 1.1333rem 5.2rem 1.333rem 6.5333rem 2.1333rem 3.333rem 2.1333rem 1.333rem 3.2rem; 
+        grid-template-columns: 3.2rem 0rem 23.6rem 0rem 3.2rem;
+    }
+
+    .title {
+        font-size: 1.8666rem;
+    }
+
+    .description {
+        line-height: 162.5%;
+        font-size: 1.1428rem;    
+    }
+
+    .summary {
+        width: 23.6rem;
+        height: 6.5333rem;
+        grid-template-rows: 1.666rem 1rem    0.6rem 0.6rem    0.9333rem 1.666rem; 
+        grid-template-columns: 1.6rem 3.2rem 1.333rem 7.8126rem 4.5873rem 3.4666rem 1.6rem;
+        grid-template-areas: 
+        ". . . . . . ."
+        ". note . plan . . ."
+        ". note . plan . change ."
+        ". note . price . change ."
+        ". note . price . . ."
+        ". . . . . . .";
+    }
+
+    .plan-type {
+        font-size: 1.0666rem;
+    }
+
+    .price {
+        font-size: 1.0666rem;
+    }
+
+    .change-link {
+        font-size: 0.9333rem;
+    }
+
+    .proceed-btn {
+        width: 23.6rem;
+        height: 3.333rem;
+    }
+
+    .proceed-btn:hover {
+        background-color: #766CF1;
+        cursor: pointer;
+    }
+
+    .cancel-link:hover {
+        cursor: pointer;
+        color:#1F2E55;
+    }
+
+    .change-link:hover {
+        text-decoration: none;
+        color: #766CF1;
+    }
+
+}
