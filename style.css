@@ -48,6 +48,7 @@ body {
     color: #1F2E55;
     text-align: center;
     font-size: 1.466rem;
+    padding-top: 3px;
     font-weight: 900;
     grid-area: title;
 }
@@ -98,6 +99,7 @@ body {
     font-weight: 500;
     grid-area: price;
     font-size: 0.9333rem;
+    padding-top: 6px;
 }
 
 .change-link {
